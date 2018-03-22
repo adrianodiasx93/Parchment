@@ -988,4 +988,10 @@ open class PagingViewController<T: PagingItem>:
         transitionSuccessful: transitionSuccessful)
     }
   }
+
+  // MARK: EMPageViewControllerDataSource
+
+  open func cancelScroll() {
+    stateMachine.fire(.cancelScrolling)
+  }
 }
